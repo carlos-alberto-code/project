@@ -13,8 +13,15 @@ public class Main {
         try {
             em.getTransaction().begin();
 
-            // Aquí irá tu código de prueba
-            System.out.println("Conexión establecida con éxito!");
+            // Crear un nuevo usuario
+            User usuario = new User("carlos", "carlos@example.com");
+            em.persist(usuario);
+
+            System.out.println("Usuario creado con éxito!");
+
+            // Buscar el usuario
+            User usuarioEncontrado = em.find(User.class, usuario.getId());
+            System.out.println("Usuario encontrado: " + usuarioEncontrado);
 
             em.getTransaction().commit();
         } catch (Exception e) {

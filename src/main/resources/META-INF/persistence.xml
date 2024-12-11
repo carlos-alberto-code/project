@@ -6,10 +6,6 @@
     <persistence-unit name="projectPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost:3306/myapp"/>
-            <property name="jakarta.persistence.jdbc.user" value="carlosDB"/>
-            <property name="jakarta.persistence.jdbc.password" value="93KnvK"/>
             <property name="jakarta.persistence.jdbc.driver"
                       value="com.mysql.cj.jdbc.Driver"/>
 
